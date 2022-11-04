@@ -1,0 +1,391 @@
+/* 
+    Name: Justin Ulizzi
+    Course: CIS233DA - Internet/Web Development Level II - Class # 23567
+    Instructor: Brian Thurber
+    Lesson 10 Project
+    Justin Ulizzi Resume CSS
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+:root {
+
+    --font-heading: 'Raleway', sans-serif, Arial, Helvetica;
+    --font-body: 'Roboto', sans-serif, Tahoma, Verdana;
+
+    --left-text-color: hsl(0, 0%, 98%);
+    --top-head-right-color: hsl(225, 88%, 45%);
+    --date-color: hsl(0, 0%, 10%);
+    --right-text-color: hsl(0, 0%, 54%);
+
+    --light-gray: hsl(0, 0%, 74%);
+    --blue-med-dark: hsl(224, 68%, 52%);
+    --blue-med-light: hsl(225, 61%, 61%);
+    --blue-light: hsl(224, 76%, 77%);
+
+    --main-light: hsl(0, 0%, 94%);
+    --main-dark: hsl(0, 0%, 5%);
+    --shadow-color: hsl(0, 0%, 25%);
+}
+
+
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--font-heading);
+    padding: .75rem .5rem .75rem .5rem;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-body);
+    background-color: var(--main-light);
+}
+
+header {
+    border-bottom: thick solid var(--light-gray);
+}
+
+header h1 {
+    text-align: center;
+    background-color: var(--blue-med-dark);
+    color: var(--main-light);
+}
+
+
+.about-me-main {
+    display: grid;
+    grid-template-columns: 250px minmax(280px, 900px);
+}
+
+.about-me-main nav {
+    height: auto;
+}
+
+.about-me-main nav ul {
+    display: grid;
+    margin-bottom: 1rem;
+}
+
+
+.about-me-main nav li a {
+    color: var(--date-color);
+    background-color: var(--blue-light);
+    padding: .5rem .5rem .5rem .5rem;
+    border-radius: .5rem;
+    margin: -12px;
+    text-decoration: none;
+
+}
+
+.about-me-main nav li a:hover {
+    color: var(--top-head-right-color);
+    background-color: var(--main-light);
+    padding: .5rem .5rem .5rem .5rem;
+    border-radius: .5rem;
+}
+
+.about-me-main nav li a:focus {
+    outline: pink thin dashed;
+}
+
+
+
+.resume_profile_pic {
+    width: 100%;
+    height: 200px;
+}
+
+.resume_profile_pic img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-top-right-radius: .5rem;
+}
+
+.material-icons {
+    font-size: 30px;
+
+}
+
+.left-side {
+    border-top-right-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+    background-color: var(--top-head-right-color);
+    color: var(--main-light);
+    border-right: solid thick var(--light-gray);
+    border-top: solid thin var(--light-gray);
+    display: flex;
+    flex-direction: column;
+    min-width: 180px;
+    box-shadow: 3px 3px 6px var(--shadow-color);
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 38px;
+
+}
+
+.left-side h1,
+.left-side h2 {
+    text-align: left;
+    text-decoration: underline var(--blue-light);
+}
+
+.left-side ul li {
+    list-style: none;
+    padding: 1rem;
+    display: inline-grid;
+    font-family: var(--font-body);
+}
+
+.title-info {
+    align-items: flex-start;
+    text-align: center;
+}
+
+.title-info .info {
+    padding-left: .25rem;
+}
+
+
+.info {
+    padding: .25rem;
+    word-wrap: break-word;
+    word-break: break-all;
+    font-weight: 300;
+}
+
+.skills-info {
+    border-top: solid thick var(--blue-med-light);
+    border-bottom: solid thick var(--blue-med-light);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 300;
+
+}
+
+.skills-info ul {
+    margin-left: 1.5rem;
+
+}
+
+.skills-info .icon {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
+
+.title {
+    margin-left: .5rem;
+}
+
+.socials {
+    border-bottom: solid thick var(--blue-med-light);
+}
+
+.socials ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.socials ul li {
+    transform: translateX(25px);
+}
+
+.socials ul p,
+.socials ul h3 {
+    transform: translateY(-45px)translateX(-25px);
+}
+
+.socials ul h3 {
+    text-align: center;
+}
+
+.socials ul p {
+    text-align: center;
+    font-weight: 300;
+}
+
+.social-icon img {
+    width: 24px;
+    height: 24px;
+}
+
+.right-side {
+    margin: 1.5rem;
+    font-family: var(--font-body);
+}
+
+.footer-container {
+    position: relative;
+    height: 100%;
+}
+
+.contact-info .icon img {
+    width: 32px;
+    height: 32px;
+}
+
+
+.footer-container .about-footer {
+    /* transform: translateY(35rem); */
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    padding: 1.25rem;
+}
+
+
+
+.right-side {
+    border-top: thin solid var(--light-gray);
+    border-right: thin solid var(--blue-med-light);
+    border-bottom: thin solid var(--light-gray);
+    border-radius: .5rem;
+    box-shadow: 3px 3px 6px var(--blue-light);
+    transform: translateX(-.5rem);
+}
+
+.right-side h2,
+.right-side h3 {
+    color: var(--top-head-right-color);
+}
+
+.right-side .date {
+    font-weight: 500;
+    color: var(--date-color);
+    text-align: right;
+    padding-right: .25rem;
+    transform: translateY(-10px);
+}
+
+
+.right-side .about-me p {
+    margin-left: .75rem;
+    padding-right: 2.5rem;
+    padding-left: 1rem;
+    padding-bottom: 1.25rem;
+    text-indent: 2.5em;
+    text-align: left;
+    border-bottom: solid thick var(--blue-light);
+}
+
+.right-side .education ul {
+    list-style: none;
+}
+
+.right-side span {
+    font-weight: 500;
+    margin-bottom: .5rem;
+}
+
+.right-side p {
+    line-height: 1.75;
+    padding-right: 1.75rem;
+    padding-bottom: .25rem;
+}
+
+.education .content p:last-of-type {
+    padding: .5rem;
+    margin-left: 2rem;
+}
+
+.resume-info ul:nth-child(2) {
+    list-style: none;
+}
+
+.company-name {
+    display: flex;
+    flex-direction: column;
+}
+
+.company-name .position {
+    margin: .75rem 0 0 1rem;
+    padding-right: 2.5rem;
+}
+
+.position ul li {
+    list-style: none;
+    margin-left: 2.5rem;
+
+}
+
+.position p {
+    text-align: left;
+    padding-left: 2.25rem;
+}
+
+
+.company-name ul {
+    list-style-type: square;
+    margin: 1.5rem;
+}
+
+.hobbies-and-interests {
+    display: grid;
+    width: 100%;
+}
+
+.hobbies {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    border-bottom: solid thick var(--blue-med-light);
+    border-bottom-right-radius: .5rem;
+}
+
+.hobbies .icon {
+    padding: 1.75rem;
+    margin: auto;
+    color: var(--blue-med-dark);
+}
+
+.hobbies .material-icons {
+
+    font-size: 65px;
+}
+
+
+.jobs {
+    border-bottom: solid thick var(--blue-light);
+}
+
+.content {
+    margin-left: 2rem;
+    padding: 1rem;
+}
+
+#skip-nav {
+    position: absolute;
+    left: .5rem;
+    padding: .5rem 1rem .5rem 1rem;
+    background-color: var(--main-dark);
+    color: var(--blue-med-light);
+    text-decoration: none;
+    border-bottom-left-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+    transform-origin: top;
+    transform: rotateX(90deg);
+    transition-duration: 200ms;
+    transition-property: all;
+}
+
+#skip-nav:focus {
+    background: linear-gradient(180deg, var(--blue-med-light), var(--blue-light));
+    color: var(--main-light);
+    transform: rotateX(0deg);
+    outline: none;
+}
